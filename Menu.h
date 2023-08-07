@@ -8,4 +8,8 @@ public:
     void ChooseCPS(int& minCps, int& maxCps);
     void SelectMode();
     void SelectKey();
+
+private:
+    bool isLeftClickSelected;
+    void ShowSubmenu();
 };

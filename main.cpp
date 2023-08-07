@@ -29,5 +29,7 @@ int main() {
     // Warte auf den Timer-Thread, um sicherzustellen, dass er abgeschlossen ist, bevor das Programm beendet wird
     timerThread.join();
 
+    //TEST
+
     return 0;
 }

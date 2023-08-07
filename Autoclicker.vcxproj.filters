@@ -32,5 +32,8 @@
     <ClInclude Include="AutoClicker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ClickMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

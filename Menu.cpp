@@ -22,11 +22,11 @@ void Menu::ShowMainMenu() {
 }
 
 void Menu::LeftClickMenu() {
-    // Implementierung
+    
 }
 
 void Menu::RightClickMenu() {
-    // Implementierung
+    
 }
 
 void Menu::ChooseCPS(int& minCps, int& maxCps) {
@@ -35,9 +35,9 @@ void Menu::ChooseCPS(int& minCps, int& maxCps) {
 }
 
 void Menu::SelectMode() {
-    // Implementierung
+    
 }
 
 void Menu::SelectKey() {
-    // Implementierung
+    
 }

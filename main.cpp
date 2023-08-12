@@ -18,13 +18,21 @@ int main() {
 
     // Starte den Autoclicker mit der "r"-Taste, um die linke Maustaste im Hold-Modus zu simulieren
     //autoClicker.Start(5, 10, 'R', true, ClickMode::Hold);
-    autoClicker.Start(5, 10, VK_SPACE, true, ClickMode::Toggle);
+    autoClicker.Start(5, 10, VK_SPACE, false, true, ClickMode::Toggle);
 
-    // Starte einen separaten Thread, der den Autoclicker nach 10 Sekunden stoppt
+    // Starte einen separaten Thread, der den Autoclicker nach 20 Sekunden stoppt
     std::thread timerThread([&autoClicker]() {
-        std::this_thread::sleep_for(std::chrono::seconds(20));
+        std::this_thread::sleep_for(std::chrono::seconds(15));
         autoClicker.Stop();
     });
+
+    // Nachrichtenschleife hinzufügen
+    MSG msg;
+    while (GetMessage(&msg, NULL, 0, 0)) {
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
+    }
+    // 
 
     // Warte auf den Timer-Thread, um sicherzustellen, dass er abgeschlossen ist, bevor das Programm beendet wird
     timerThread.join();
